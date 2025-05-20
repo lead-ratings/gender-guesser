@@ -54,7 +54,7 @@ class Detector:
             elif parts[0] == "?":
                 self._set(name, u"andy", country_values)
             else:
-                raise "Not sure what to do with a sex of %s" % parts[0]
+                raise ValueError("Not sure what to do with a sex of %s" % parts[0])
 
     def _set(self, name, gender, country_values):
         """Sets gender and relevant country values for names dictionary of detector"""

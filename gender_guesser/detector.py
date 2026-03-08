@@ -1,5 +1,4 @@
 import os.path
-import codecs
 
 
 class NoCountryError(Exception):
@@ -30,7 +29,7 @@ class Detector:
     def _parse(self, filename):
         """Opens data file and for each line, calls _eat_name_line"""
         self.names = {}
-        with codecs.open(filename, encoding="utf-8") as f:
+        with open(filename, encoding="utf-8") as f:
             for line in f:
                 self._eat_name_line(line.strip())
 
